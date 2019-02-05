@@ -30,17 +30,29 @@
             var canvas = document.querySelector('canvas');
             var c = canvas.getContext('2d');
 
+            var player = {
+                
+            }
+
             window.addEventListener('resize', resizeCanvas, false);
 
             function resizeCanvas(){
                 canvas.width = window.innerWidth;
                 canvas.height = window.innerHeight;
-
                 draw();
             }
 
-            function draw(){
+            
 
+            function draw(){
+                c.lineWidth = 3;
+                c.strokeStyle = "white";
+                c.strokeRect(200, 200, 150, 100);
+
+                c.moveTo(canvas.width / 2, canvas.height / 2);
+                c.lineTo(150, 60);
+                c.closePath();
+                c.stroke();
             }
 
             resizeCanvas();
