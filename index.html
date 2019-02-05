@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Astroid_Miner</title>
+        <style type="text/css">
+            canvas {
+                height: 100%;
+                width: 100%;
+                background-color: black;
+                display: block;
+            }
+            body{
+                margin:0;
+                padding:0;
+            }
+            #gameTitle{
+                position: fixed;
+                margin-left: 20px;
+                color: azure;
+                z-index: 2
+            }
+        </style>
+    </head>
+    <body>
+        <h1 id='gameTitle'>ASTEROID MINER</h1>
+        <canvas id='canvas'></canvas>
+        <script>
+            console.log('Asteroid miner');
+            var canvas = document.querySelector('canvas');
+            var c = canvas.getContext('2d');
+
+            window.addEventListener('resize', resizeCanvas, false);
+
+            function resizeCanvas(){
+                canvas.width = window.innerWidth;
+                canvas.height = window.innerHeight;
+
+                draw();
+            }
+
+            function draw(){
+
+            }
+
+            resizeCanvas();
+
+        </script>
+    </body>
+    
+</html>
